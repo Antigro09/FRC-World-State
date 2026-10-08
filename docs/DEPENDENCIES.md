@@ -9,7 +9,7 @@ Optional integration checks were repeated against these public source revisions:
 | Component | Public repository | Exact revision |
 |---|---|---|
 | Raw vision schemas and golden fixture | [Custom-Vision](https://github.com/Antigro09/Custom-Vision) | `fd093ef2948e7ac206727fff5cc7dc2a0288347b` |
-| Decoding, lifecycle and clock mapping | [Custom-Vision-Java](https://github.com/Antigro09/Custom-Vision-Java) | `573a7d1d433ff27d9f0fbf4ff97ba52358678ff3` |
+| Decoding, lifecycle and clock mapping | [Custom-Vision-Java](https://github.com/Antigro09/Custom-Vision-Java) | `ae67886da70223e9ee73683ee2bcd00dc3221469` |
 | Geometric planner backend | [1086-On-The-Fly-A-Star](https://github.com/Antigro09/1086-On-The-Fly-A-Star) | `59ad897d895315a751df67c5751e30370850a784` |
 
 Pin the revisions explicitly; a repository's default branch may contain a different
@@ -21,7 +21,7 @@ mkdir -p "$DEPS"
 git clone https://github.com/Antigro09/Custom-Vision.git "$DEPS/Custom-Vision"
 git -C "$DEPS/Custom-Vision" checkout --detach fd093ef2948e7ac206727fff5cc7dc2a0288347b
 git clone https://github.com/Antigro09/Custom-Vision-Java.git "$DEPS/Custom-Vision-Java"
-git -C "$DEPS/Custom-Vision-Java" checkout --detach 573a7d1d433ff27d9f0fbf4ff97ba52358678ff3
+git -C "$DEPS/Custom-Vision-Java" checkout --detach ae67886da70223e9ee73683ee2bcd00dc3221469
 git clone https://github.com/Antigro09/1086-On-The-Fly-A-Star.git "$DEPS/1086-On-The-Fly-A-Star"
 git -C "$DEPS/1086-On-The-Fly-A-Star" checkout --detach 59ad897d895315a751df67c5751e30370850a784
 python3 scripts/export-contracts.py \

@@ -50,7 +50,7 @@
       }
     ],
     "pin_status": "public_revision_and_content_verified",
-    "public_revision": "573a7d1d433ff27d9f0fbf4ff97ba52358678ff3",
+    "public_revision": "ae67886da70223e9ee73683ee2bcd00dc3221469",
     "repository": "https://github.com/Antigro09/Custom-Vision-Java",
     "source_sha256": {
       "protocol/src/main/java/org/customvision/protocol/CaptureReorderBuffer.java": "bed516275f3c7bbc70041f89fd3c28ca14df20b9b24affed182c57709ff5a70f",
