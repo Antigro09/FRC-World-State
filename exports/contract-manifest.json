@@ -1,0 +1,122 @@
+{
+  "a_star": {
+    "legacy_demo_wpilib": "2026.2.2",
+    "pin_status": "public_revision_and_content_verified",
+    "public_revision": "59ad897d895315a751df67c5751e30370850a784",
+    "repository": "https://github.com/Antigro09/1086-On-The-Fly-A-Star",
+    "source_sha256": {
+      "src/integrationTest/java/pathplanning/backend/WorldStateEnvelopeIntegrationSuite.java": "232d432909579d9b235bdcfb0310cfc8c8440b49bf09ee6cf95c193446ef7a56",
+      "src/main/java/pathplanning/geometric/GeometricSolver.java": "b83505534d7a02f42f2842e9630f793d6a2fadf78737ec602c3d618333ea8eac",
+      "src/main/java/pathplanning/geometric/Geometry.java": "f89e33f99c469a52c839431d77297dbe42f15044ab7e3e14b2c55b401990f6b3",
+      "src/main/java/pathplanning/geometric/PlannerSmokeExample.java": "1df5cb28b4ccd1d99a44066d1f798aade08466de472e9cc84770799a2bde2142",
+      "src/main/java/pathplanning/geometric/SweptCollision.java": "85edf3d7fc7b57c831b2281a7c916454f294db81aaf34273018ff72a97b49513",
+      "src/worldStateAdapter/java/pathplanning/backend/AStarPlannerBackend.java": "9a374c275964d4f4c67da8c588686c90e4b44e5bca7e21aee112cf6ea7e820db",
+      "src/worldStateAdapter/java/pathplanning/backend/LatestRequestPlanner.java": "66230d6fa166892cd20ea090f4f48dcca5c307ad0296f74268394d6446b2d376"
+    }
+  },
+  "custom_vision": {
+    "pin_status": "public_revision_and_content_verified",
+    "public_revision": "fd093ef2948e7ac206727fff5cc7dc2a0288347b",
+    "repository": "https://github.com/Antigro09/Custom-Vision",
+    "source_sha256": {
+      "protocol/custom-vision-schema2-2026.1.json": "0d5edf4f3eb7c6091d343fe4229147d7fac0c2aa210bf602365c841c259b36e5",
+      "protocol/fixture-manifest.json": "9e49bfe7a3fd9956c16401648fe7c58b63acda91705e817611ece2ea507cd223",
+      "protocol/fixtures/objects_compact_covariance_selection.json": "c0e5c0ea9241423e1d3aa8fe19373931cf3fab080ced9af2b9021d9eaf6fc6d9",
+      "protocol/schema2.json": "6565ccd1984efb47579b7f97940fe7d818289eac969ce4ed44b72bc10d85a966"
+    }
+  },
+  "custom_vision_java": {
+    "api_manifest_sha256": "3d53b2a73e261740d1a2bd31e37176e53e9e09035d19d173a7142d5ade69a5dc",
+    "artifacts": [
+      {
+        "bytes": 35148,
+        "path": "protocol/build/libs/protocol-0.1.0-local-sources.jar",
+        "sha256": "eab782d08a5c42e66366e82c906963515487b94504d7c61c2204deaf8d6ecd68"
+      },
+      {
+        "bytes": 114781,
+        "path": "protocol/build/libs/protocol-0.1.0-local.jar",
+        "sha256": "3b04bfff73b83291aa8673254ff7112e9c596c9da33f9056dcd15ef7cc9f7b4f"
+      },
+      {
+        "bytes": 8269,
+        "path": "wpilib2026/build/libs/wpilib2026-0.1.0-local.jar",
+        "sha256": "84ad8fd423b3fc90bd17caa2d890427cc1b306e9977d5e02d8d7cefe361f9763"
+      },
+      {
+        "bytes": 8273,
+        "path": "wpilib2027/build/libs/wpilib2027-0.1.0-local.jar",
+        "sha256": "d5b4d3c97ff9950df80ea7bd7c32806de2b9d977977d460d6db88d5ece11cacc"
+      }
+    ],
+    "pin_status": "public_revision_and_content_verified",
+    "public_revision": "573a7d1d433ff27d9f0fbf4ff97ba52358678ff3",
+    "repository": "https://github.com/Antigro09/Custom-Vision-Java",
+    "source_sha256": {
+      "protocol/src/main/java/org/customvision/protocol/CaptureReorderBuffer.java": "bed516275f3c7bbc70041f89fd3c28ca14df20b9b24affed182c57709ff5a70f",
+      "protocol/src/main/java/org/customvision/protocol/ClockMapper.java": "a289801b47f3622bc7ba735a18831be422b296ebc2052a66ff6716e81f32ebd9",
+      "protocol/src/main/java/org/customvision/protocol/DecodeException.java": "dded105d509ba96ea7c2094f8dff7b8ab8cfe38c1f2e27a622ea2a5e3bd68397",
+      "protocol/src/main/java/org/customvision/protocol/HistoricalPoseProvider.java": "603e4a51c2c4d90df1058ab9076d8d567e57d014880430b6986bcee33292ef72",
+      "protocol/src/main/java/org/customvision/protocol/Json.java": "827f371effdd60c124375e2dfcea70892be8cf402ecd4c096fff21b91d85767c",
+      "protocol/src/main/java/org/customvision/protocol/Packet.java": "8d27536b9690132ab7e30824fef75e41062027d108e59748fd126c3ff257c523",
+      "protocol/src/main/java/org/customvision/protocol/ProtocolDecoder.java": "f2c4ba301ae6852c19529a7083c6378afb6f15f78a1b40f14939fe5cbd52555c",
+      "protocol/src/main/java/org/customvision/protocol/RawQueue.java": "2ca148166ed885cb132861a868bb136f6f4af21e0f81acb8b7279bd0d961c521",
+      "protocol/src/main/java/org/customvision/protocol/SourceKey.java": "23f973bb1527b8a797ca3abe21129e20387dd6f9d9b51a53edba7fbb9e3064e6",
+      "protocol/src/main/java/org/customvision/protocol/SourceSession.java": "ff1006fd2aa07f185d2ac751f0a2bcf7a57f6fde52b2b95321656c5fe490b6af",
+      "protocol/src/main/java/org/customvision/protocol/SyncSnapshot.java": "f80c07ddd8c9093ce0296df981c58777793495bff05f5735000603587da23a63",
+      "protocol/src/main/java/org/customvision/protocol/TimeVersion.java": "5877edc2d7659aa568829ac143d580ef305e29196f837d7ba3530abc19e929fb",
+      "protocol/src/main/java/org/customvision/protocol/TransportSample.java": "f0a5bf2c021f0c258f3c4d1f1986d23e178f2200a85f487d5e5e5996e79ccd09",
+      "protocol/src/main/java/org/customvision/protocol/VisionClient.java": "7113585bd4a4033e99238f66fdaefe5254c41564d8bb8eb75ec092903e2f5ec9"
+    },
+    "target_profiles": [
+      {
+        "intended_controller": "roboRIO",
+        "java": 17,
+        "wpilib": "2026.2.1"
+      },
+      {
+        "intended_controller": "Systemcore",
+        "java": 25,
+        "wpilib": "2027.0.0-alpha-7"
+      }
+    ],
+    "verified_owner_file_count": 18
+  },
+  "hardware_status": "UNRUN; prompt 6 integration ON HOLD",
+  "manifest_version": 2,
+  "world_state": {
+    "contract_versions": [
+      "frc-planner/1",
+      "frc-prediction/1"
+    ],
+    "fixture_sha256": {
+      "fixtures/prediction/reply-v1.json": "7e2a3252ca2792d80fdaa700e778de5c3d8a547328cb171af575df895e61bc75",
+      "fixtures/prediction/request-v1.json": "d232d9d8b5aac65f8ac2db191bfeb03d0d3c0e23301333fb3039142f735e4b4b"
+    },
+    "java_release": 17,
+    "optional_adapter_sha256": {
+      "adapters/custom-vision-java/src/main/java/org/frcworldstate/vision/CustomVisionAdapter.java": "576a31d987bccb2f650e3a250c665e3a6208f445df991437633ec4b99118a694"
+    },
+    "repository": "https://github.com/Antigro09/FRC-World-State",
+    "schema_sha256": {
+      "schemas/prediction-reply-v1.schema.json": "5d05c7fef9f08ed1d4196c64455c623b6cd1b489852fa609c65bccab03e6cc14",
+      "schemas/prediction-request-v1.schema.json": "4fe241f505bc6055d9526bfb7dda996a7838cfcbdc12f5c636989cc9c1d5f658"
+    },
+    "source_sha256": {
+      "src/main/java/org/frcworldstate/core/Geometry.java": "4dc7c42e1c196681fcd8c176dc9cc9aa132def99da805d7838b26344375c8b28",
+      "src/main/java/org/frcworldstate/core/LatestWorker.java": "f655f1296b093c544e39d13bdb0c6efd0baf9e4ffb78574b6cc50e9b8d4dc269",
+      "src/main/java/org/frcworldstate/core/ObstacleEnvelopeBuilder.java": "8a07be95384fa2f519f01d9b4b678fc4cb3910d839b0b084d53a2443bf8188c4",
+      "src/main/java/org/frcworldstate/core/PickupController.java": "1ca4c569bb5efa2aa3762fecad60f136c859a265e8b512006c7f4618d7efa55f",
+      "src/main/java/org/frcworldstate/core/PlannerBackend.java": "5f6c6e709516c522c2bfc765e8d7a241c274cb4ac1d2e1d03e5d0599980665aa",
+      "src/main/java/org/frcworldstate/core/PlannerValidation.java": "5ab942113a6b0eac6674de11bb56b224f553f5516e46757706c642bc302b189c",
+      "src/main/java/org/frcworldstate/core/PoseHistory.java": "505986935dd60f866432fa216ea14997a326d44b5e361f3d857e0dc606f30a6a",
+      "src/main/java/org/frcworldstate/core/PredictionGate.java": "b8d185c1129d523381d7984d106b0510bc48d5253734f090680842b338689966",
+      "src/main/java/org/frcworldstate/core/Predictor.java": "22f003c7b223fb2329d5bbde85056d9087056449f15ff2f0e51f2265cf4ab018",
+      "src/main/java/org/frcworldstate/core/SafetySupervisor.java": "41c17f5a4689f73347fb6ea8eb37ab31bfc7ba341a75bfa37d0d9432d0f2e1a1",
+      "src/main/java/org/frcworldstate/core/TimeDomains.java": "732714f06b5140df9ca015ec322648a62862f36dfbb341a0b79d846058797567",
+      "src/main/java/org/frcworldstate/core/World.java": "7157b4ded74429d8e372b35f3e0aa13f49187e1b75019f000555ec2117378bf3",
+      "src/main/java/org/frcworldstate/core/WorldEngine.java": "5308553e60f4ddb1d45aebd231376ec4f8f8656bb674b630c8895783a7779059"
+    },
+    "wpilib_source_audit": "2026.2.2 and 2027.0.0-alpha-7; no WPILib core dependency"
+  }
+}
