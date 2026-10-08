@@ -1,7 +1,8 @@
 # Local API follow-up evidence
 
-Local branch: `feat/usable-vision-target-selection`, based on published
-`0e5b6c3f85d47205cde8b0c80e13fa79d35e95ab`. This follow-up is not pushed.
+The original local verification used `feat/usable-vision-target-selection`, based
+on published `0e5b6c3f85d47205cde8b0c80e13fa79d35e95ab`. The finished feature is
+now published; see [publication and public dependency refs](PUBLICATION.md).
 
 ## Delivered
 
@@ -65,9 +66,10 @@ is `12ee0ab5ede1e0d51c561f8a3d245a4e0822c926`. Both revisions match the exact
 protocol source, source-jar entries and `0.2.0-local.1` protocol binary/source jar
 hashes recorded here. The owner source/artifact checker verifies 63 pins.
 The older public CVJ baseline is explicitly incompatible with the new bridge API.
-Do not claim a reproducible public-only bridge install until that source is
-separately published with authorization. Core and pinned A* checks are independent
-of that prerequisite.
+The matching feature source has since been published with authorization at the
+same verified handoff revision. Public clone instructions are in
+[DEPENDENCIES.md](DEPENDENCIES.md). This does not publish binary packages or claim
+a Maven/vendordep install. Core and pinned A* checks remain independent of CVJ.
 
 The owner native receipts target World-State implementation `d24f2bb…`. Subsequent
 pin/documentation changes here preserve every source and controller-jar hash, so

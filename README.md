@@ -58,6 +58,7 @@ manifest; the older published CVJ baseline cannot compile that follow-up.
 - [Optional vision admission/geometry adapter](docs/VISION_ADAPTER.md)
 - [Controller API wiring and persistent-object selection](docs/USABILITY.md)
 - [Local API follow-up verification](docs/USABILITY_REPORT.md)
+- [Published feature and public dependency references](docs/PUBLICATION.md)
 - [Acceptance results and remaining limits](docs/IMPLEMENTATION_REPORT.md)
 - [Separately gated hardware checklist](docs/HARDWARE_CHECKLIST.md)
 

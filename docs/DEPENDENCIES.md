@@ -17,25 +17,28 @@ version. The admitted-observation follow-up requires CVJ's **local feature API**
 and `VisionClient.DeliveryGate` validates current originating-client and facade
 eligibility. The older public baseline `ae67886da70223e9ee73683ee2bcd00dc3221469`
 does not supply that API. Its public revision is retained as historical baseline
-metadata, not a buildable pin for this bridge. No feature publication is claimed.
-The final local handoff is pinned to
+metadata, not a buildable pin for this bridge. The matching API is published on
+[CVJ's feature/captain-api branch](https://github.com/Antigro09/Custom-Vision-Java/tree/feature/captain-api).
+The final handoff is pinned to
 `6639c8fc70c5d1b8b88e93711614c0b480b42efe`, with implementation revision
 `12ee0ab5ede1e0d51c561f8a3d245a4e0822c926`. The handoff changes metadata only;
 both revisions have the same verified protocol sources and jar bytes. The manifest
 records those semantic source/artifact pins. Core-only tests and the A* check do
 not require CVJ.
 
-Clone producer/planner into a directory you choose, supply an explicitly available
-matched CVJ feature checkout, and pass those paths to the scripts:
+Clone the pinned feature sources into a directory you choose and pass those paths
+to the scripts:
 
 ```sh
 DEPS="$PWD/../frc-dependencies"
 mkdir -p "$DEPS"
 git clone https://github.com/Antigro09/Custom-Vision.git "$DEPS/Custom-Vision"
 git -C "$DEPS/Custom-Vision" checkout --detach fd093ef2948e7ac206727fff5cc7dc2a0288347b
+git clone https://github.com/Antigro09/Custom-Vision-Java.git "$DEPS/Custom-Vision-Java"
+git -C "$DEPS/Custom-Vision-Java" checkout --detach 6639c8fc70c5d1b8b88e93711614c0b480b42efe
 git clone https://github.com/Antigro09/1086-On-The-Fly-A-Star.git "$DEPS/1086-On-The-Fly-A-Star"
 git -C "$DEPS/1086-On-The-Fly-A-Star" checkout --detach 59ad897d895315a751df67c5751e30370850a784
-CVJ=/path/to/matched-local-Custom-Vision-Java-feature
+CVJ="$DEPS/Custom-Vision-Java"
 python3 scripts/export-contracts.py \
   --producer "$DEPS/Custom-Vision" \
   --vision-java "$CVJ" \
@@ -49,7 +52,8 @@ Already available local checkouts are explicit overrides: supply their paths in
 place of the cloned directories. The verifier rejects any recorded source content
 mismatch. Neither test script fetches code or edits a dependency. The verifier
 checks selected content hashes offline. Producer/planner public reachability was
-verified for the baseline; the CVJ follow-up is a separate local prerequisite.
+verified for the baseline; the exact CVJ feature ref was verified after its
+authorized publication. Its source/artifact pins are unchanged.
 `--write` regenerates only this
 repository's content hashes and retains external pins; it does not approve a new
 dependency version.
