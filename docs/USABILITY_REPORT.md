@@ -33,6 +33,7 @@ prediction v1 contracts, schemas and prediction fixture bytes are unchanged.
 | `./scripts/package-controller.sh MATCHED_PROTOCOL_JAR` | Four main-source-only Java 17 jars; expected package/bytecode content checked. |
 | `jdeps -s build/controller/frc-world-state-core-0.1.0-local.jar` | `java.base` only. |
 | `git diff --check` | Pass. |
+| CVJ owner's native NT-to-World-State receipts | 61 assertions per pinned 2026/alpha-7 profile; all 17 current World-State source hashes match both receipts. Synthetic desktop loopback timing, no hardware. |
 
 The bridge tests exercise real decoder/session/mapping/admission over bounded fake
 transport. Only timing qualification and I/O are synthetic. They include consume
@@ -58,13 +59,21 @@ content verification correctly rejected the newer producer fixture manifest and
 A* geometry source. Checks were repeated against the declared public source
 content. The golden object bytes remain identical.
 
-CVJ's admitted envelope API is a separate local feature. The manifest records its
-exact source and `0.2.0-local.1` protocol binary/source jar hashes. A null
-`local_feature_revision` means the final owner commit is still pending, and the
-older public CVJ baseline is explicitly incompatible with the new bridge API.
+CVJ's admitted envelope API is a separate local feature. The final clean handoff
+is `6639c8fc70c5d1b8b88e93711614c0b480b42efe`; its semantic implementation pin
+is `12ee0ab5ede1e0d51c561f8a3d245a4e0822c926`. Both revisions match the exact
+protocol source, source-jar entries and `0.2.0-local.1` protocol binary/source jar
+hashes recorded here. The owner source/artifact checker verifies 63 pins.
+The older public CVJ baseline is explicitly incompatible with the new bridge API.
 Do not claim a reproducible public-only bridge install until that source is
 separately published with authorization. Core and pinned A* checks are independent
 of that prerequisite.
+
+The owner native receipts target World-State implementation `d24f2bb…`. Subsequent
+pin/documentation changes here preserve every source and controller-jar hash, so
+that implementation pin remains valid. Native tests were not repeated for metadata
+changes; source/artifact and receipt hash checks were rerun. No circular handoff
+commit update is required.
 
 No remaining failing software check at this recorded cut. Gradle entry points,
 real follower/mechanism bindings, actual robot integration, deployment, hardware,

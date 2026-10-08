@@ -18,9 +18,12 @@ and `VisionClient.DeliveryGate` validates current originating-client and facade
 eligibility. The older public baseline `ae67886da70223e9ee73683ee2bcd00dc3221469`
 does not supply that API. Its public revision is retained as historical baseline
 metadata, not a buildable pin for this bridge. No feature publication is claimed.
-The manifest records exact matched feature source and local protocol jar hashes;
-a null feature commit means the owner source commit is still pending. Core-only
-tests and the A* check do not require CVJ.
+The final local handoff is pinned to
+`6639c8fc70c5d1b8b88e93711614c0b480b42efe`, with implementation revision
+`12ee0ab5ede1e0d51c561f8a3d245a4e0822c926`. The handoff changes metadata only;
+both revisions have the same verified protocol sources and jar bytes. The manifest
+records those semantic source/artifact pins. Core-only tests and the A* check do
+not require CVJ.
 
 Clone producer/planner into a directory you choose, supply an explicitly available
 matched CVJ feature checkout, and pass those paths to the scripts:

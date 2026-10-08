@@ -12,6 +12,8 @@ The optional adapter requires the CVJ feature API recorded in
 **not** provide the new `Measurement.admission()`, `clock()`, `transport()` or
 `DeliveryGate` API. Use the explicitly matched feature checkout/jar; do not
 reconstruct successful lifecycle or clock results from a packet.
+The final local CVJ handoff pin is `6639c8fc70c5d1b8b88e93711614c0b480b42efe`;
+its implementation/source pin is separately recorded in the manifest.
 
 `VisionTrackBridge` takes the configured `CustomVisionAdapter`, robot-owned
 `WorldEngine` and the originating facade's current delivery gate:

@@ -26,6 +26,7 @@
     }
   },
   "custom_vision_java": {
+    "api_manifest_sha256": "25bafe69632a1b1fa38f104c4fd2ca60d103f843b7e1ea462b43d99b84979e70",
     "artifacts": [
       {
         "bytes": 117215,
@@ -38,9 +39,12 @@
         "sha256": "bba10e7acd69dd5eec7128c6970f7a9f6039c4f69ee62c8e8f606bbe94662dc2"
       }
     ],
+    "implementation_revision": "12ee0ab5ede1e0d51c561f8a3d245a4e0822c926",
     "local_feature_branch": "feature/captain-api",
-    "local_feature_revision": null,
-    "pin_status": "local_feature_source_and_binary_verified_commit_pending",
+    "local_feature_revision": "6639c8fc70c5d1b8b88e93711614c0b480b42efe",
+    "native_bridge_tested_world_state_implementation_revision": "d24f2bbf11a4f9b3b73c7d3a05f3b6f416204117",
+    "pin_status": "local_feature_revision_source_and_binary_verified",
+    "protocol_source_manifest_sha256": "f25ec7090d1a36192ee4780465835ee6c6112bdf6b8caafa374bff50b7d3d8af",
     "public_baseline_api_manifest_sha256": "3d53b2a73e261740d1a2bd31e37176e53e9e09035d19d173a7142d5ade69a5dc",
     "public_baseline_revision": "ae67886da70223e9ee73683ee2bcd00dc3221469",
     "publication_status": "local_only; older public baseline lacks this admitted envelope API",
