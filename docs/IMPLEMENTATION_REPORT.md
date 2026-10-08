@@ -1,5 +1,8 @@
 # Implementation report
 
+This report records the published baseline. The newer local API follow-up and
+its current dependency/test status are in [USABILITY_REPORT.md](USABILITY_REPORT.md).
+
 ## Delivered component
 
 - Pure Java 17 immutable geometry, ego/object/snapshot/robot-fact contracts; explicit

@@ -10,6 +10,7 @@ find adapters/custom-vision-java/src -name '*.java' -print | sort > build/vision
 javac --release 17 -Xlint:all -Werror -d build/vision/cvj @build/vision/cvj-sources.txt
 javac --release 17 -Xlint:all -Werror -cp build/classes:build/vision/cvj -d build/vision/adapter @build/vision/adapter-sources.txt
 java -ea -cp build/classes:build/vision/cvj:build/vision/adapter org.frcworldstate.vision.CustomVisionAdapterTest "$PRODUCER_CHECKOUT/protocol/fixtures"
+java -ea -cp build/classes:build/vision/cvj:build/vision/adapter org.frcworldstate.vision.AdmittedVisionTrackingTest "$PRODUCER_CHECKOUT/protocol/fixtures"
 
 # Optional third argument verifies the same adapter against the exact owner binary artifact.
 if [ "$#" -ge 3 ]; then
@@ -17,4 +18,5 @@ if [ "$#" -ge 3 ]; then
     mkdir -p build/vision/artifact-adapter
     javac --release 17 -Xlint:all -Werror -cp "build/classes:$CVJ_PROTOCOL_JAR" -d build/vision/artifact-adapter @build/vision/adapter-sources.txt
     java -ea -cp "build/classes:$CVJ_PROTOCOL_JAR:build/vision/artifact-adapter" org.frcworldstate.vision.CustomVisionAdapterTest "$PRODUCER_CHECKOUT/protocol/fixtures"
+    java -ea -cp "build/classes:$CVJ_PROTOCOL_JAR:build/vision/artifact-adapter" org.frcworldstate.vision.AdmittedVisionTrackingTest "$PRODUCER_CHECKOUT/protocol/fixtures"
 fi

@@ -6,6 +6,8 @@ public final class AcceptanceTest {
         TrackerWorkerTest.run();
         EnvelopeTest.run();
         PickupSafetyTest.run();
+        PickupBindingsTest.run();
+        TargetSelectorTest.run();
         PredictionContractTest.main(new String[0]);
         System.out.println("All pure-Java acceptance suites passed (CPU synthetic; no hardware evidence).");
     }

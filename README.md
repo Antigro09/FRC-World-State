@@ -45,12 +45,19 @@ or assume another workspace's directory structure. The core needs no sibling
 repository or published package. No GitHub Actions workflow is supplied; the
 commands above are local software verification.
 
+The local controller API follow-up adds `VisionTrackBridge`, `TargetSelector` and
+`PickupBindings`; see [wiring, required bindings and local jars](docs/USABILITY.md).
+Its optional bridge requires the separately matched CVJ feature API in the
+manifest; the older published CVJ baseline cannot compile that follow-up.
+
 ## Contracts and architecture
 
 - [Architecture and reset/tracking decisions](docs/ARCHITECTURE.md)
 - [Planner contract handoff](docs/PLANNER_CONTRACT.md)
 - [Prediction contract, JSON schemas and golden vectors](docs/PREDICTION_CONTRACT.md)
 - [Optional vision admission/geometry adapter](docs/VISION_ADAPTER.md)
+- [Controller API wiring and persistent-object selection](docs/USABILITY.md)
+- [Local API follow-up verification](docs/USABILITY_REPORT.md)
 - [Acceptance results and remaining limits](docs/IMPLEMENTATION_REPORT.md)
 - [Separately gated hardware checklist](docs/HARDWARE_CHECKLIST.md)
 
