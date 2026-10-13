@@ -13,6 +13,7 @@ import org.customvision.protocol.Packet;
 import org.customvision.protocol.SourceKey;
 import org.customvision.protocol.SourceSession;
 import org.customvision.protocol.TimeVersion;
+import org.customvision.protocol.VisionClient;
 import org.frcworldstate.core.Geometry;
 import org.frcworldstate.core.TimeDomains;
 import org.frcworldstate.core.World;
@@ -92,6 +93,32 @@ public final class CustomVisionAdapter {
     }
     public Binding binding() { return binding; }
     public Policy policy() { return policy; }
+
+    /** Normalize historical admission provenance. The caller must recheck current client deliverability. */
+    public Result adapt(VisionClient.Measurement measurement, long nowUs) {
+        Objects.requireNonNull(measurement, "drained admitted measurement required");
+        return adapt(measurement.packet(), measurement.admission(), measurement.clock(), nowUs);
+    }
+
+    /** Live callback/manual-drain ingress; use the original nanosecond clock without a lossy roundtrip. */
+    public Result adaptDeliverable(VisionClient client, VisionClient.Measurement measurement, long nowRobotNs) {
+        Objects.requireNonNull(client, "originating client required");
+        return adaptDeliverable(client::isDeliverable, measurement, nowRobotNs);
+    }
+
+    /** Facade gate also includes its camera mode and binding fences; it exposes no raw client. */
+    public Result adaptDeliverable(VisionClient.DeliveryGate gate, VisionClient.Measurement measurement, long nowRobotNs) {
+        Objects.requireNonNull(gate, "originating rig/client delivery gate required"); Objects.requireNonNull(measurement);
+        Geometry.time(nowRobotNs);
+        if (!gate.isDeliverable(measurement, nowRobotNs)) {
+            Packet packet = measurement.packet();
+            Provenance provenance = new Provenance(packet, measurement.admission(), measurement.clock(),
+                    binding.geometryProfileRevision(), binding.correlationGroup(), optionalString(packet.fields().get("field_layout_revision")));
+            return unavailable(Reason.NO_NEW_MEASUREMENT,
+                    "historically admitted envelope is no longer deliverable by its originating rig/client", provenance);
+        }
+        return adapt(measurement, TimeDomains.mappedRobotNsToUs(nowRobotNs));
+    }
 
     /**
      * Invoke only for a publication approved by CVJ's SourceSession/liveness policy. Invalidation is
